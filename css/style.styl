@@ -1,0 +1,40 @@
+fittyPer = 50%
+translateFitty = translate(-50%, 0%)
+transform(n)
+  -webkit-transform n
+  -moz-transform n
+  -o-transform n
+  transform n
+
+
+html
+body
+	background-color black
+	overflow hidden
+
+#logo
+	width 600px
+	height 67px
+	text-align center
+	position fixed
+	top 20px
+	left fittyPer
+	transform translateFitty
+	z-index 99999
+	img
+		width 100%
+
+.video
+	padding 0
+	margin 0
+	width 110%
+	height 110%
+	position absolute
+	z-index 1
+	iframe
+		z-index 1
+		position absolute
+		top -15%
+		left -20%
+		width 130%
+		height 130%
