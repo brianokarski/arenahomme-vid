@@ -1,16 +1,46 @@
+<!--         
+                                                                                                                                                          
+                   f@@@      G@@@     L@@@@@@@@1     @@@@.      f@@@@   @@@@;      ,@@@@   @@@@@@@@@@@@t        .@@@;        
+                   f@@@      G@@@   :@@@@@00@@@@@,   @@@@@     1@@@@@   @@@@@,    ,@@@@@   @@@@GGGGGGGGi        .@@@;        
+                   f@@@LLLLLL8@@@   @@@8      @@@@   @@@@@@   i@@@@@@   @@@@@@.   @@@@@@   @@@@LLLLLLL.    CCCCCC@@@GCCCCC   
+  0@C88:L:,:@ 8@   f@@@@@@@@@@@@@  ;@@@        @@@,  @@@@@@@ ;@@@@@@@   @@@@@@@. @@@@@@@   @@@@@@@@@@@.    @@@@@@@@@@@@@@@   
+                   f@@@      G@@@   @@@@      @@@@   @@@f0@@@@@@;@@@@   @@@8t@@@@@@C8@@@   @@@@                 .@@@;        
+                   f@@@      G@@@    @@@@@@@@@@@@    @@@f @@@@@1 @@@@   @@@8 G@@@@0 @@@@   @@@@@@@@@@@@1        .@@@;        
+                   f@@@      G@@@      C@@@@@@L      @@@f  @@@L  @@@@   @@@8  8@@@  @@@@   @@@@@@@@@@@@t        .@@@;       
+ 
+
+                    Brian Okarski, 2014
+                    www.brianokarski.com
+
+ -->
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>ARENA HOMME+</title>
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="javascript" href="http://code.jquery.com/jquery-latest.min.js">
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js'></script>
+	<script src='/js/okvideo.js'></script>
+	<script type="text/javascript">
+	$(function(){
+	    $.okvideo({ source: '29473526',
+	                volume: 75,
+	                loop: true,
+	                hd:true,
+	                adproof: true,
+	                annotations: false,
+	                onFinished: function() { console.log('finished') },
+	                unstarted: function() { console.log('unstarted') },
+	                onReady: function() { console.log('onready') },
+	                onPlay: function() { console.log('onplay') },
+	                onPause: function() { console.log('pause') },
+	                buffering: function() { console.log('buffering') },
+	                cued: function() { console.log('cued') },
+	             });
+	});
+	</script>
 </head>
 <body>
 	<div id="logo"><img src="img/ah+_logo.png"></div>
-	<div class="video">
-		<iframe id="hommeframe" src="//player.vimeo.com/video/29473526?autoplay=1&badge=0&byline=0&loop=1&title=0&portrait=0&color=333&api=1" width="110%" height="110%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	</div>
-	
 </body>
 </html>
